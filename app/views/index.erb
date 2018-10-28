@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Recipe List</h1>
+    <% Recipe.all.each do |r| %>
+        <p><a href="/recipes/<%= r.id %>">Name: <%= r.name %></a></p>
+    <% end %>
+    <br>
+    <a href="/recipes/new">Add New Recipe</a>
+  </body>
+</html>
